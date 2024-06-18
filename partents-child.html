@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> <p id="grandParent">
+        Grandparent: 
+            </p>
+        <div> <p id="parent">
+            Parent: 
+            </p>
+            <p id="child">
+                Child: 
+            </p>
+            <p id="child2">
+                Child 2: 
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Accessing the parent element
+        const grandParent = document.getElementById('grandParent');
+        //console.dir(grandParent)
+        grandParent.innerHTML += 'Back in my day...'
+        
+        const parent = document.getElementById('parent');
+        parent.innerHTML += 'Because I said so.'
+
+        const child = document.getElementById('child');
+        child.innerHTML += 'Why?'
+
+        const child2 = document.getElementById('child2');
+        child2.innerHTML += 'I am bored'
+
+
+        // Adding a new element to the parent
+        //const newElementPartOfGrandParent = document.createElement('p');
+        //newElementPartOfGrandParent.textContent = "Say hi to my second child";
+        //grandParent.appendChild(newElementPartOfGrandParent);
+    </script>
+</body>
+</html>

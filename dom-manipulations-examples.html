@@ -20,6 +20,25 @@
   <button onclick="modifyElements()">Modify Elements</button>
   <hr>
 
+<script>
+  function selectElements()
+        {
+            const myFirstElement = document.getElementById('example-id');
+            console.log("First element selected", myFirstElement);
+            const HTMLElementCollection = document.getElementsByClassName('example-class');
+            console.log("De text from first element with class", HTMLElementCollection[0].innerHTML);
+            const collectionOfDivs = document.getElementsByTagName('div');
+            console.log("All divs", collectionOfDivs);
+            myFirstElement.addEventListener('onclick', SayHI)
+            console.log("Second with eventlistener", HTMLElementCollection[0]);
+            console.log("All divs", collectionOfDivs);
+        }
+        function SayHI()
+        {
+            alert('hi')
+        }
+</script>
+
   <!-- Elements for creating and inserting examples -->
   <div id="parent-element"></div>
   <button onclick="createAndInsertElement()">Create and Insert Element</button>

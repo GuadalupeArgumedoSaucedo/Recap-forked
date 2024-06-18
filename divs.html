@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="myName">This is my name </div>
+    <div class="color">My First color class</div>
+    <div id="color2" class="color">My Second color class</div>
+
+    <button onclick="selectElements()">Select Elements</button>
+    <button onclick="changeText()">Second Color Class</button>
+    <button onclick="changeColor()">My Name Color</button>
+
+    <script>
+        function selectElements()
+        {
+            const myNameElement = document.getElementById('myName');
+            console.log("First element selected", myNameElement);
+            const HTMLElementClassCollection = document.getElementsByClassName('color');
+            console.log("All classes", HTMLElementClassCollection);
+            console.dir(HTMLElementClassCollection);
+
+            myNameElement.addEventListener('click', SayHI)
+            console.log(myNameElement)
+        }
+
+        function SayHI()
+        {
+            alert('hi');
+        }
+    </script>
+
+<script>
+    function changeText()
+    {
+        const secondColorElement = document.getElementById('color2');
+                secondColorElement.innerHTML = 'I changed my innerText';
+                console.log(secondColorElement);
+    }
+</script>
+
+<script>
+function changeColor()
+    {
+    const styledElement = document.getElementById('myName');
+      styledElement.style.color = 'green';
+      console.log(styledElement.style.color); 
+    }
+</script>
+
+</body>
+</html>
